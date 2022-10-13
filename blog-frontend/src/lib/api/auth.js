@@ -10,3 +10,5 @@ export const register = async ({ username, password }) =>
   await api.post('/api/auth/register', { username, password })
 
 export const check = () => api.get('api/auth/check')
+
+export const logout = () => api.get('/api/auth/logout')
