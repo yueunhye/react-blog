@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
+import Editor from '../components/write/Editor'
+import Responsive from '../components/common/Responsive'
 
 const WritePage = () => {
   return (
-    <div>
-      Write
-    </div>
-  );
-};
+    <Responsive>
+      <Editor />
+    </Responsive>
+  )
+}
 
-export default WritePage;
+export default WritePage
