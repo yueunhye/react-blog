@@ -62,8 +62,7 @@ const auth = handleActions(
       }),
     [INITIALIZE_FORM]: (state, { payload: form }) => ({
       ...state,
-      [form]: initialState[form],
-      authError: null
+      [form]: initialState[form]
     }),
     [REGISTER_SUCCESS]: (state, { payload: auth }) => ({
       ...state,
