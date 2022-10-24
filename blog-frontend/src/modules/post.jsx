@@ -21,10 +21,10 @@ const initialState = { post: null, error: null, lastPage: 1 }
 
 const post = handleActions(
   {
-    [READ_POST_SUCCESS]: (state, { payload: post, meta: res }) => ({
+    [READ_POST_SUCCESS]: (state, { payload: post }) => ({
       ...state,
       post,
-      lastPage: parseInt(res.header['last-page'], 10)
+      lastPage: parseInt(['last-page'], 10)
     }),
     [READ_POST_FAILURE]: (state, { payload: error }) => ({
       ...state,

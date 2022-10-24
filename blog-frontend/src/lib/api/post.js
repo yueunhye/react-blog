@@ -12,3 +12,9 @@ export const listPosts = async ({ page, username, tag }) => {
     params: { page, username, tag }
   })
 }
+
+export const updatePost = async ({ id, title, body, tags }) => {
+  await api.patch(`/api/posts/${id}`, { title, body, tags })
+}
+
+export const removePost = async id => await api.delete(`/api/posts/${id}`)
